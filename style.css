@@ -123,7 +123,7 @@ border-bottom: 2px solid var(--borda);
 .medio{
     background-color: yellow;
     height: 30px;
-    width: 33%;
+    width: 66%;
     position: relative;
     bottom: 30px;
 }
