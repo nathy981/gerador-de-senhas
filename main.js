@@ -1,14 +1,47 @@
-const numeroSenha = document.querySelector   (.'parametro-senha__texto')
-numeroSenha. textoContent = 5;
+const numeroSenha = document.querySelector('.parametro-senha__texto')
+const campoSenha = document.querySelector('#campo-senha')
+
+campoSenha.value = 'nathy31'
+//OPEN IN WEBVIEW
+let letrasmaiuculas = 'AbCDEFGHIJKLMNOPQRSTUVWXYZ'
+minusculas, numeros e simbolos
 
 tamanhoSenha = 8
-numeroSenha
-const botoes = document.querySelector ('parametro-senha__texto')
-querySelectorAll ('parametro-senha__botao')
+numeroSenha.textContent = tamanhoSenha;
 
-botoes [0].onclik = diminuir;
 
-function diminuir () {
-    tamanhoSenha--;
-   numeroSenha.textoContent = tamanhoSenha
+const botoes = document.querySelectorAll('.parametro-senha__botao')
+
+
+// pega o 1°botao = -
+botoes[0].onclick = diminuir;
+// funçao diminuir
+function diminuir(){
+   // diminui de 1 em 1 e mostra na tela
+   tamanhoSenha--;
+   numeroSenha.textContent = tamanhoSenha;
 }
+
+// BOTAO DE AUMENTAR
+
+// pega o 1°botao = +
+botoes[1].onclick = AUMENTAR;
+// funçao AUMENTAR
+function AUMENTAR(){
+   // aumenta de 1 em 1 e mostra na tela
+   tamanhoSenha++;
+   numeroSenha.textContent = tamanhoSenha;
+}
+//FUNÇÂO CRIAR SENHA ALEATORIA
+geraSenha()
+
+function geraSenha(){
+    let senha = ''
+    //LOOP - Repetições
+    for(let i = 0; i < tamanhoSenha; i++){
+        let numeroAleatorio = Math.random()* 26;
+        numeroAletorio = Math.floor(numeroAleatorio)
+        senha = senha + letrasmaiuculas[numeroAletorio]
+        }
+        campoSenha.value = senha;
+    }
