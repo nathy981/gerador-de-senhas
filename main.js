@@ -9,6 +9,17 @@ let letrasmaiuculas = 'AbCDEFGHIJKLMNOPQRSTUVWXYZ'
 tamanhoSenha = 8
 numeroSenha.textContent = tamanhoSenha;
 
+const checkbox = document.querySelectorAll('.checkbox')
+
+for(let i = 0; < checkbox.length; i ++){
+   checkbox[i].onclick = geraSenha;
+}
+
+//checkbox[0] = maiusculas
+//checkbox[1] =
+//checkbox[2] =
+//checkbox[3] =
+
 
 const botoes = document.querySelectorAll('.parametro-senha__botao')
 
@@ -45,5 +56,6 @@ function geraSenha(){
         numeroAleatorio = Math.floor(numeroAleatorio)
         senha = senha + letrasmaiuculas[numeroAleatorio]
         }
-        campoSenha.value = senha;
+        campoSenha.value = senha; 
     }
+
