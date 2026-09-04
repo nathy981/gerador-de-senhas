@@ -4,7 +4,7 @@ const campoSenha = document.querySelector('#campo-senha')
 campoSenha.value = 'nathy31'
 //OPEN IN WEBVIEW
 let letrasmaiuculas = 'AbCDEFGHIJKLMNOPQRSTUVWXYZ'
-minusculas, numeros e simbolos
+//minusculas, numeros e simbolos
 
 tamanhoSenha = 8
 numeroSenha.textContent = tamanhoSenha;
@@ -20,6 +20,7 @@ function diminuir(){
    // diminui de 1 em 1 e mostra na tela
    tamanhoSenha--;
    numeroSenha.textContent = tamanhoSenha;
+   geraSenha()
 }
 
 // BOTAO DE AUMENTAR
@@ -31,6 +32,7 @@ function AUMENTAR(){
    // aumenta de 1 em 1 e mostra na tela
    tamanhoSenha++;
    numeroSenha.textContent = tamanhoSenha;
+geraSenha()
 }
 //FUNÇÂO CRIAR SENHA ALEATORIA
 geraSenha()
@@ -40,8 +42,8 @@ function geraSenha(){
     //LOOP - Repetições
     for(let i = 0; i < tamanhoSenha; i++){
         let numeroAleatorio = Math.random()* 26;
-        numeroAletorio = Math.floor(numeroAleatorio)
-        senha = senha + letrasmaiuculas[numeroAletorio]
+        numeroAleatorio = Math.floor(numeroAleatorio)
+        senha = senha + letrasmaiuculas[numeroAleatorio]
         }
         campoSenha.value = senha;
     }
