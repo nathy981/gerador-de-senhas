@@ -1,6 +1,9 @@
 const numeroSenha = document.querySelector('.parametro-senha__texto')
 const campoSenha = document.querySelector('#campo-senha')
 
+const forcasenha = dovument.querySelector("forca")
+
+
 campoSenha.value = 'nathy31'
 //OPEN IN WEBVIEW
 let letrasmaiuculas = 'AbCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -16,8 +19,8 @@ for(let i = 0; < checkbox.length; i ++){
 }
 
 //checkbox[0] = maiusculas
-//checkbox[1] =
-//checkbox[2] =
+//checkbox[1] = 
+//checkbox[2] = 
 //checkbox[3] =
 
 
@@ -57,5 +60,15 @@ function geraSenha(){
         senha = senha + letrasmaiuculas[numeroAleatorio]
         }
         campoSenha.value = senha; 
+        classificarSenha()
+        
+    }
+
+
+    //Função para clasificar a senha
+    function classificarSenha(){
+      if(tamanhoSenha > 11){
+         forcaSenha.classList.add('forte')
+
     }
 
