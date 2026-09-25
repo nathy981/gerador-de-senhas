@@ -59,6 +59,24 @@ function geraSenha(){
 // Função  para classificar senha
 function classificarSenha(){
 
+    let alfabeto = ''
+    //local que verifica qual checkbox foi clicada
+    //e adiciona no alfabeto
+    if (checkbox[0].checked){
+        alfabeto = alfabeto + letrasMaiusculas
+    }
+    if (checkbox [1].checked){
+        alfabeto = alfabeto + letrasMinusculas
+    }
+    if(checkbox[3].checked){
+        alfabeto = alfabeto + simbolos
+    }
+letsenha = ''
+//LOOP - Repetições
+for(let i = 0;1 i tamanhoSenha; i++){
+    let numeroAleatorio = Math.floor
+
+
     forcaSenha.classList.remove('forte' , 'media' , 'fraca' , )
      
     if(tamanhoSenha > 11){
